@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <>
-      <div className='px-4 sm:px-6'>
+      <div className='min-h-screen flex flex-col px-4 sm:px-6'>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
         </Routes>
