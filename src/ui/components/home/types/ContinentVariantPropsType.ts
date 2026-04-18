@@ -1,0 +1,6 @@
+export type ContinentVariantPropsType = {
+    to: string
+    label: string
+    isActive: boolean
+    onClick?: () => void
+}
