@@ -15,7 +15,12 @@ type DTOCountry = {
     flags: Flags
     name: Name
     population: number, 
-    region: string, 
+    region: string,
+    subregion?: string
+    area: number
+    continents?: string[]
+    languages?: Record<string, string>
+    currencies?: Record<string, { name: string; symbol: string }>
 }
 
 export type { DTOCountry }
