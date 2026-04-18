@@ -2,6 +2,9 @@
 
 @theme {
     --color-background: #F5F2EC;
+    --color-background-card: #EDEAE2;
+    --color-border-primary: #0a19291f;
+    --font-country: "Playfair Display";
 }
 
 html, body, #root {
