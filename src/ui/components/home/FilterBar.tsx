@@ -1,6 +1,6 @@
 import DropdownFilter from "./DropdownFilter"
 import SearchBar from "./SearchBar"
-import type { SearchProps } from "./types/SearchProps"
+import type { SearchProps } from "./types/SearchPropsType"
 
 function FilterBar({ search, onSearchChange }: SearchProps) {
     return (
