@@ -7,7 +7,7 @@ type ContinentFilterProps = {
     closeMenu?: () => void
 }
 
-function ContinentFilter({ variant, closeMenu }: ContinentFilterProps) {
+function ContinentFilter({ variant, closeMenu } : ContinentFilterProps) {
   if (variant === "mobile") {
     return (
       <div className="flex flex-col gap-4">
