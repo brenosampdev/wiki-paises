@@ -1,4 +1,4 @@
-function Hero() {
+function HomeHero() {
     return (
         <div className="text-center py-12 px-10 flex flex-col gap-2 border-b border-b-border-primary ">
             <h1 className="text-6xl font-serif">Explore the World</h1>
@@ -7,4 +7,4 @@ function Hero() {
     )
 }
 
-export default Hero
+export default HomeHero
