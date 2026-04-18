@@ -1,5 +1,5 @@
 import { MagnifyingGlassIcon } from "@phosphor-icons/react"
-import type { SearchProps } from "./types/SearchProps"
+import type { SearchProps } from "./types/SearchPropsType"
 
 
 function SearchBar({ search, onSearchChange }: SearchProps) {
