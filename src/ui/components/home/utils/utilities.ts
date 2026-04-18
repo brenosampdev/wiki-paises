@@ -27,10 +27,6 @@ export function formatCapitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-export function formatArea(area: number): string {
-  return `${area.toLocaleString('pt-BR')} km²`
-}
-
 export function getPrimaryCapital(capitals: string[] | undefined): string {
   return capitals?.[0] ?? 'N/A'
 }
