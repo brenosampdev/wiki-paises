@@ -1,73 +1,83 @@
-# React + TypeScript + Vite
+# WikiPaíses
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Catálogo digital de nações soberanas construído com React + Vite, consumindo a [REST Countries API](https://restcountries.com).
 
-Currently, two official plugins are available:
+![Preview da aplicação](./docs/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Links
 
-## React Compiler
+- **Deploy:** <https://URL-DO-SEU-DEPLOY.vercel.app>
+- **Repositório:** <https://github.com/SEU-USUARIO/wiki-paises>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sobre o projeto
 
-## Expanding the ESLint configuration
+Projeto acadêmico da disciplina T242 - Desenvolvimento de Plataformas Web (UNIFOR), orientado pelo Prof. Bruno Lopes. Aplicação front-end que permite explorar informações de países através de duas telas:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Home (`/`):** listagem paginada de países, com busca por nome, filtro por continente e navegação para detalhes.
+- **Detail (`/country/:code`):** informações completas de um país (bandeira, nome oficial, capital, continente, sub-região, área, população, idiomas, moeda e código).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 19** + **TypeScript** + **Vite**
+- **React Router DOM** — navegação entre telas
+- **Axios** — requisições HTTP
+- **Tailwind CSS** — estilização
+- **Phosphor Icons** — biblioteca de ícones
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Estrutura de pastas
+
+```
+src/
+├── services/          # Requisições HTTP (Axios) organizadas por domínio
+│   └── countries/
+├── types/             # Tipos TypeScript (DTOs)
+├── ui/
+│   ├── components/    # Componentes reutilizáveis
+│   │   ├── home/
+│   │   ├── details/
+│   │   └── shared/    # Header, Footer, LoadingState, ErrorState
+│   └── pages/         # Home e CountryDetail
+└── App.tsx            # Configuração das rotas
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como rodar localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Requisitos: Node.js 18+ e npm.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clonar o repositório
+git clone https://github.com/SEU-USUARIO/wiki-paises.git
+cd wiki-paises
+
+# Instalar dependências
+npm install
+
+# Rodar em modo desenvolvimento
+npm run dev
+
+# Build de produção
+npm run build
 ```
+
+A aplicação abre em `http://localhost:5173`.
+
+## Funcionalidades
+
+- [x] Listagem de países com dados da REST Countries API
+- [x] Busca por nome (filtragem em tempo real)
+- [x] Filtro por continente (Americas, Europe, Asia, Africa, Oceania)
+- [x] Paginação com controles Previous/Next
+- [x] Empty state quando a busca não retorna resultados
+- [x] Estados de loading e erro em operações assíncronas
+- [x] Navegação para tela de detalhes ao clicar em um card
+- [x] Tela de detalhes com bandeira em destaque, dados formatados e seção descritiva
+- [x] Navegação via URL stateless (filtros persistem em recarga)
+- [x] Layout responsivo (mobile e desktop)
+
+## Sobre o uso de IA
+
+O desenvolvimento deste projeto contou com auxílio de IA (Claude, da Anthropic) como ferramenta de aprendizado e revisão. Todos os prompts e respostas utilizados estão documentados no PDF de entrega conforme exigido pelo instrumento de avaliação.
+
+---
+
+Projeto acadêmico — UNIFOR · 2026
