@@ -3,7 +3,7 @@ import { GithubLogoIcon, LinkedinLogoIcon } from "@phosphor-icons/react"
 function Footer() {
     return(
     <footer className="bg-stone-900 text-stone-300">
-        <div className="max-w-6xl mx-auto px-6 md:px-20 py-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div className="max-w-6xl mx-auto px-6 md:px-20 py-10 flex flex-row md:flex-row justify-between items-start md:items-center gap-6">
             <div className="flex flex-col gap-1">
                 <h3 className="text-xl font-serif italic text-stone-100">
                     WikiPaíses
