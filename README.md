@@ -2,16 +2,16 @@
 
 Catálogo digital de nações soberanas construído com React + Vite, consumindo a [REST Countries API](https://restcountries.com).
 
-![Preview da aplicação](./docs/preview.png)
+![Preview da aplicação](https://i.imgur.com/1mhDtMO.png)
 
 ## Links
 
-- **Deploy:** <https://URL-DO-SEU-DEPLOY.vercel.app>
-- **Repositório:** <https://github.com/SEU-USUARIO/wiki-paises>
+- **Deploy:** <https://wiki-paises-ten.vercel.app/>
+- **Repositório:** <https://github.com/brenosampdev/wiki-paises>
 
 ## Sobre o projeto
 
-Projeto acadêmico da disciplina T242 - Desenvolvimento de Plataformas Web (UNIFOR), orientado pelo Prof. Bruno Lopes. Aplicação front-end que permite explorar informações de países através de duas telas:
+Projeto acadêmico da disciplina - Desenvolvimento de Plataformas Web (UNIFOR), orientado pelo Prof. Bruno Lopes. Aplicação front-end que permite explorar informações de países através de duas telas:
 
 - **Home (`/`):** listagem paginada de países, com busca por nome, filtro por continente e navegação para detalhes.
 - **Detail (`/country/:code`):** informações completas de um país (bandeira, nome oficial, capital, continente, sub-região, área, população, idiomas, moeda e código).
@@ -80,4 +80,4 @@ O desenvolvimento deste projeto contou com auxílio de IA (Claude, da Anthropic)
 
 ---
 
-Projeto acadêmico — UNIFOR · 2026
+Projeto acadêmico UNIFOR · 2026
